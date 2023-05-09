@@ -7,6 +7,8 @@ import pandas as pd
 import streamlit as st
 
 sys.path.append("..")
+from test_results import *
+
 from omiclearn.utils.ml_helper import (
     calculate_cm,
     normalize_dataset,
@@ -14,8 +16,6 @@ from omiclearn.utils.ml_helper import (
     transform_dataset,
 )
 from omiclearn.utils.ui_components import load_data, main_analysis_run, objdict
-
-from test_results import *
 
 state = {}
 
