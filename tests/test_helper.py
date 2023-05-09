@@ -156,8 +156,9 @@ def test_integration():
     # Generate X and y
     main_analysis_run(test_state)
 
-    # print("\n", test_state, "\n")
     _cv_results, _cv_curves = perform_cross_validation(test_state, cohort_column=None)
+    print(f"\n\n_cv_results:{_cv_results}\n\n")
+    print(f"\n\n_cv_curves:{str(_cv_curves)}\n\n")
     assert _cv_results == expected_cv_results, "Error in CV Results"
     assert str(_cv_curves) == str(expected_cv_curves_str), "Error in CV Curves"
 
