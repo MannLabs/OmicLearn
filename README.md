@@ -17,7 +17,7 @@
 Transparent exploration of machine learning for biomarker discovery from proteomics and omics data. This is a maintained fork from [OmicEra](https://github.com/OmicEra/OmicLearn).
 
 ## Quickstart
-A three minute quickstart video to showcase OmicLearn can be found [here](https://youtu.be/VE9pj1G89io).
+A three minute quickstart video to showcase OmicLearn can be found [here on YouTube](https://youtu.be/VE9pj1G89io).
 
 ## Manuscript
 - 📰 <a href="https://doi.org/10.1021/acs.jproteome.2c00473" target="_blank">Open-access article: **Transparent Exploration of Machine Learning for Biomarker Discovery from Proteomics and Omics Data**</a>
