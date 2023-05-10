@@ -32,6 +32,7 @@ def run():
         file_path,
         "--global.developmentMode=false",
         "--browser.gatherUsageStats=False",
+        "--logger.level=error",
     ]
 
     sys.argv = args
