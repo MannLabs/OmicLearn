@@ -283,7 +283,9 @@ def perform_cross_validation(state, cohort_column=None):
 
     for metric_name, metric_fct in scorer_dict.items():
         _cv_results[metric_name] = []
+        _cv_results[metric_name + "_train"] = []
     _cv_results["pr_auc"] = []  # ADD pr_auc manually
+    _cv_results["pr_auc_train"] = []  # ADD pr_auc manually
 
     X = state.X
     y = state.y
@@ -367,10 +369,20 @@ def perform_cross_validation(state, cohort_column=None):
 
                 calibrated_clf = CalibratedClassifierCV(clf, cv=cv_generator)
                 calibrated_clf.fit(X_train, y_train)
+
+                # Train
+                y_train_pred = calibrated_clf.predict(X_train)
+                y_train_pred_proba = calibrated_clf.predict_proba(X_train)
+                # Validation
                 y_pred = calibrated_clf.predict(X_test)
                 y_pred_proba = calibrated_clf.predict_proba(X_test)
             else:
                 clf.fit(X_train, y_train)
+
+                # Train
+                y_train_pred = clf.predict(X_train)
+                y_train_pred_proba = clf.predict_proba(X_train)
+                # Validation
                 y_pred = clf.predict(X_test)
                 y_pred_proba = clf.predict_proba(X_test)
 
@@ -395,21 +407,42 @@ def perform_cross_validation(state, cohort_column=None):
                 feature_importance = None
 
             # ROC CURVE
+            # Validation
             fpr, tpr, cutoffs = roc_curve(y_test, y_pred_proba[:, 1])
 
             # PR CURVE
+            # Train
+            precision_train, recall_train, _train = precision_recall_curve(
+                y_train, y_train_pred_proba[:, 1]
+            )
+            # Validation
             precision, recall, _ = precision_recall_curve(y_test, y_pred_proba[:, 1])
 
             for metric_name, metric_fct in scorer_dict.items():
                 if metric_name == "roc_auc":
+                    # Train
+                    _cv_results[metric_name + "_train"].append(
+                        metric_fct(y_train, y_train_pred_proba[:, 1])
+                    )
+                    # Validation
                     _cv_results[metric_name].append(
                         metric_fct(y_test, y_pred_proba[:, 1])
                     )
                 elif metric_name in ["precision", "recall", "f1"]:
+                    # Train
+                    _cv_results[metric_name + "_train"].append(
+                        metric_fct(y_train, y_train_pred, zero_division=0)
+                    )
+                    # Validation
                     _cv_results[metric_name].append(
                         metric_fct(y_test, y_pred, zero_division=0)
                     )
                 else:
+                    # Train
+                    _cv_results[metric_name + "_train"].append(
+                        metric_fct(y_train, y_train_pred)
+                    )
+                    # Validation
                     _cv_results[metric_name].append(metric_fct(y_test, y_pred))
 
             # Results of Cross Validation
@@ -423,12 +456,10 @@ def perform_cross_validation(state, cohort_column=None):
             _cv_results["n_class_0_test"].append(np.sum(y_test))
             _cv_results["n_class_1_test"].append(np.sum(~y_test))
             _cv_results["class_ratio_test"].append(np.sum(y_test) / len(y_test))
-            _cv_results["pr_auc"].append(
-                auc(recall, precision)
-            )  # ADD PR Curve AUC Score
-            _cv_curves["pr_auc"].append(
-                auc(recall, precision)
-            )  # ADD PR Curve AUC Score
+            # Train PR Curve AUC Score
+            _cv_results["pr_auc_train"].append(auc(recall_train, precision_train))
+            # Validation PR Curve AUC Score
+            _cv_results["pr_auc"].append(auc(recall, precision))
             _cv_curves["roc_curves_"].append((fpr, tpr, cutoffs))
             _cv_curves["pr_curves_"].append((precision, recall, _))
             _cv_curves["y_hats_"].append((y_test.values, y_pred))

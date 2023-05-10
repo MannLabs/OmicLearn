@@ -38,16 +38,13 @@ def test_load_data():
     # csv
     df = pd.DataFrame({"A": [1, 1], "B": [0, 0]})
     csv_data, warnings = load_data("test_csv_c.csv", "Comma (,)")
-    print(csv_data)
     pd.testing.assert_frame_equal(csv_data, df)
 
     csv_data, warnings = load_data("test_csv_sc.csv", "Semicolon (;)")
-    print(csv_data)
     pd.testing.assert_frame_equal(csv_data, df)
 
     # TSV
     tsv_data, warnings = load_data("test_tsv.tsv", "Tab (\\t) for TSV")
-    print(tsv_data)
     pd.testing.assert_frame_equal(tsv_data, df)
 
 
@@ -153,10 +150,10 @@ def test_integration():
     test_state["cv_repeats"] = 2
     test_state["bar"] = st.progress(0)
     test_state["features"] = ["AAA", "BBB", "CCC", "_study"]
+
     # Generate X and y
     main_analysis_run(test_state)
 
-    # print("\n", test_state, "\n")
     _cv_results, _cv_curves = perform_cross_validation(test_state, cohort_column=None)
     assert _cv_results == expected_cv_results, "Error in CV Results"
     assert str(_cv_curves) == str(expected_cv_curves_str), "Error in CV Curves"
