@@ -86,7 +86,7 @@ For detailed installation instructions of the one-click installers refer to the 
   python -m omiclearn
   ```
 
- - After starting the Streamlit server, the OmicLearn page should be automatically opened in your browser (Default link: [`http://localhost:8501`](http://localhost:8501)
+ - After starting the Streamlit server, the OmicLearn page should be automatically opened in your browser Default link: [`http://localhost:8501`](http://localhost:8501)
 
 
 ## Getting Started with OmicLearn
