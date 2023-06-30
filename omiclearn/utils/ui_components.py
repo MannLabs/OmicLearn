@@ -588,16 +588,23 @@ def _generate_eda_section(state):
             )
 
         if state.eda_method == "Hierarchical clustering":
+            default_slider_end_point = (
+                round(len(state.proteins) / 10)
+                if len(state.proteins) > 499
+                else round(len(state.proteins) / 3)
+            )
             state["data_range"] = st.slider(
                 "Data range to be visualized",
                 0,
                 len(state.proteins),
-                (0, round(len(state.proteins) / 2)),
-                step=3,
+                (0, default_slider_end_point),
+                step=1 if len(state.proteins) < 100 else 10,
                 help="In large datasets, it is not possible to visaulize all the features.",
             )
 
-        if state.eda_method != "None":
+        if (state.eda_method != "None") and (
+            st.button("Perform EDA", key="perform_eda")
+        ):
             with st.spinner(f"Performing {state.eda_method}.."):
                 p = perform_EDA(state)
                 st.plotly_chart(p, use_container_width=True)
