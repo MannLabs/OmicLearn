@@ -21,7 +21,8 @@ A three-minute quickstart video to showcase OmicLearn can be found [here on YouT
 
 ## PyCon Talk
 
-- ["How to Build an Open-Source Machine Learning Platform in Biology?"](https://2023.pycon.it/en/event/how-to-build-an-open-source-machine-learning-platform-in-biology) | [Furkan M. Torun](https://furkanmtorun.github.io/) | [PyCon Italia, Florence, Italy, 2023](https://2023.pycon.it/en) 
+- ["How to Build an Open-Source Machine Learning Platform in Biology?"](https://2023.pycon.it/en/event/how-to-build-an-open-source-machine-learning-platform-in-biology) | [Furkan M. Torun](https://furkanmtorun.github.io/) | [PyCon Italia, Florence, Italy, 2023](https://2023.pycon.it/en)
+  
   [![PyConITaly](http://img.youtube.com/vi/6RrxWH9qskY/0.jpg)](http://www.youtube.com/watch?v=6RrxWH9qskY "How to Build an Open-Source Machine Learning Platform in Biology? - Furkan M. Torun")
 
 
