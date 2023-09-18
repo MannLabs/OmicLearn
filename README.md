@@ -17,7 +17,13 @@
 Transparent exploration of machine learning for biomarker discovery from proteomics and omics data. This is a maintained fork from [OmicEra](https://github.com/OmicEra/OmicLearn).
 
 ## Quickstart
-A three minute quickstart video to showcase OmicLearn can be found [here on YouTube](https://youtu.be/VE9pj1G89io).
+A three-minute quickstart video to showcase OmicLearn can be found [here on YouTube](https://youtu.be/VE9pj1G89io).
+
+## PyCon Talk
+
+- ["How to Build an Open-Source Machine Learning Platform in Biology?"](https://2023.pycon.it/en/event/how-to-build-an-open-source-machine-learning-platform-in-biology) | [Furkan M. Torun](https://furkanmtorun.github.io/) | [PyCon Italia, Florence, Italy, 2023](https://2023.pycon.it/en) 
+  [![PyConITaly](http://img.youtube.com/vi/6RrxWH9qskY/0.jpg)](http://www.youtube.com/watch?v=6RrxWH9qskY "How to Build an Open-Source Machine Learning Platform in Biology? - Furkan M. Torun")
+
 
 ## Manuscript
 - 📰 <a href="https://doi.org/10.1021/acs.jproteome.2c00473" target="_blank">Open-access article: **Transparent Exploration of Machine Learning for Biomarker Discovery from Proteomics and Omics Data**</a>
