@@ -14,7 +14,9 @@
 ---
 
 # OmicLearn
-Transparent exploration of machine learning for biomarker discovery from proteomics and omics data. This is a maintained fork from [OmicEra](https://github.com/OmicEra/OmicLearn).
+Transparent exploration of machine learning for biomarker discovery from proteomics and omics data. 
+
+This is a maintained fork from [OmicEra](https://github.com/OmicEra/OmicLearn).
 
 ## Quickstart
 A three-minute quickstart video to showcase OmicLearn can be found [here on YouTube](https://youtu.be/VE9pj1G89io).
@@ -39,9 +41,7 @@ A three-minute quickstart video to showcase OmicLearn can be found [here on YouT
 
 ```
 Torun, F. M., Virreira Winter, S., Doll, S., Riese, F. M., Vorobyev, A., Mueller-Reif, J. B., Geyer, P. E., & Strauss, M. T. (2022). 
-
 Transparent Exploration of Machine Learning for Biomarker Discovery from Proteomics and Omics Data.
-
 Journal of Proteome Research. https://doi.org/10.1021/acs.jproteome.2c00473
 ```
 
@@ -105,6 +105,7 @@ The following image displays the main steps of OmicLearn:
 Detailed instructions on how to get started with OmicLearn can be found **[here.](https://OmicLearn.readthedocs.io/en/latest/USING.html)**
 
 ## Contributing
+
 All contributions are welcome. 👍
 
 📰 To get started, please check out our **[`CONTRIBUTING`](https://github.com/MannLabs/OmicLearn/blob/master/CONTRIBUTING.md)** guidelines.
