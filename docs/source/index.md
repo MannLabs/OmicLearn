@@ -1,7 +1,7 @@
 <p align="center"> <img src="https://raw.githubusercontent.com/MannLabs/OmicLearn/master/omiclearn.png" height="270" width="277"/> </p>
-<h2 align="center">Online version: <a href="https://ol-v14.streamlit.app/" target="_blank">OmicLearn</a> </h2>
+<h2 align="center">Online version: <a href="https://ol-v14.streamlit.app/" target="_blank">OmicLearn</a></h2>
 
-<h2 align="center"> 📰 Manual and Documentation: <a href="https://OmicLearn.readthedocs.io/en/latest/" target="_blank">OmicLearn ReadTheDocs </a> </h2>
+<h2 align="center"> 📰 Manual and Documentation: <a href="https://OmicLearn.readthedocs.io/en/latest/" target="_blank">OmicLearn ReadTheDocs </a></h2>
 
 <div align="center">
   <img alt="OmicLearn Test" src="https://github.com/MannLabs/OmicLearn/workflows/OmicLearn%20Tests/badge.svg">
@@ -47,7 +47,7 @@ Journal of Proteome Research. https://doi.org/10.1021/acs.jproteome.2c00473
 
 ## Online Access
 
-🟢  <a href="https://share.streamlit.io/MannLabs/OmicLearn/OmicLearn/OmicLearn.py" target="_blank"> Streamlit share</a>
+🟢  <a href="https://ol-v14.streamlit.app/" target="_blank">OmicLearn</a>
 
 This is an online version hosted by streamlit using free cloud resources, which might have limited performance. Use the local installation to run OmicLearn on your own hardware.
 
