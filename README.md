@@ -2,6 +2,9 @@
 <h2 align="center">Online version: <a href="https://ol-v14.streamlit.app/" target="_blank">OmicLearn</a> </h2>
 
 <h2 align="center"> 📰 Documentation: <a href="https://OmicLearn.readthedocs.io/en/latest/" target="_blank">OmicLearn ReadTheDocs </a> </h2>
+<h2 align="center"> 📄 Manuscript: <a href="https://doi.org/10.1021/acs.jproteome.2c00473" target="_blank">Open-access Article </a> </h2>
+
+
 
 <div align="center">
   <img alt="OmicLearn Test" src="https://github.com/MannLabs/OmicLearn/workflows/OmicLearn%20Tests/badge.svg">
