@@ -47,7 +47,7 @@ Journal of Proteome Research. https://doi.org/10.1021/acs.jproteome.2c00473
 
 ## Online Access
 
-🟢  <a href="https://share.streamlit.io/MannLabs/OmicLearn/OmicLearn/OmicLearn.py" target="_blank"> Streamlit share</a>
+🟢 <a href="https://ol-v14.streamlit.app/" target="_blank">OmicLearn v1.4 | Online Access</a>
 
 This is an online version hosted by streamlit using free cloud resources, which might have limited performance. Use the local installation to run OmicLearn on your own hardware.
 
