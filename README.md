@@ -19,10 +19,10 @@
 # OmicLearn
 Transparent exploration of machine learning for biomarker discovery from proteomics and omics data. 
 
-This is a maintained fork from [OmicEra](https://github.com/OmicEra/OmicLearn).
+This is a maintained fork from [OmicEra](https://github.com/OmicEra/OmicLearn). Note: The original repository has been deleted.
 
 ## Quickstart
-A three-minute quickstart video to showcase OmicLearn can be found [here on YouTube](https://youtu.be/VE9pj1G89io).
+A three-minute quickstart video to showcase OmicLearn can be found [on YouTube](https://youtu.be/VE9pj1G89io).
 
 ## PyCon Talk
 
